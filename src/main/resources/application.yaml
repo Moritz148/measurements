@@ -1,0 +1,7 @@
+camunda:
+  client:
+    mode: self-managed
+    zeebe:
+      enabled: true
+      grpc-address: http://zeebe:26500
+      rest-address: http://zeebe:8080
