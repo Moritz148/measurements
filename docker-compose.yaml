@@ -141,10 +141,6 @@ services:
         # allow running with low disk space
         - cluster.routing.allocation.disk.threshold_enabled=false
         - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      ulimits:
-        memlock:
-          soft: -1
-          hard: -1
       restart: unless-stopped
       healthcheck:
         test: [ "CMD-SHELL", "curl -f http://localhost:9200/_cat/health | grep -q green" ]
